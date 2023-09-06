@@ -1,6 +1,7 @@
 import "dotenv/config";
+import express from "express";
 import { Bot, InlineKeyboard, InlineQueryResultBuilder, webhookCallback } from "grammy";
-import { devBootstrap } from "./devBootstrap";
+import ngrok from "ngrok";
 
 const { BOT_TOKEN, NGROK_TOKEN, NODE_ENV } = process.env;
 
@@ -11,7 +12,19 @@ export const bot = new Bot(BOT_TOKEN, { client: { canUseWebhookReply: (method) =
 if (NODE_ENV === "development" && !NGROK_TOKEN) {
   console.log("Can't run bot in development mode without NGROK_TOKEN.");
 } else {
-  await devBootstrap();
+  const app = express();
+
+  await ngrok.authtoken(NGROK_TOKEN);
+
+  const url = await ngrok.connect({ addr: 3000 });
+
+  app.use(webhookCallback(bot, "https"));
+
+  app.listen(3000);
+
+  const { statusText } = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/setWebhook?url=${url}`);
+
+  console.log(`Webhook set with response: ${statusText}`);
 }
 
 bot.command("start", async (ctx) => {
