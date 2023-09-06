@@ -14,7 +14,7 @@ if (NODE_ENV === "development" && !NGROK_TOKEN) {
 } else {
   const app = express();
 
-  await ngrok.authtoken(NGROK_TOKEN);
+  await ngrok.authtoken({ authtoken: NGROK_TOKEN });
 
   const url = await ngrok.connect({ addr: 3000 });
 
