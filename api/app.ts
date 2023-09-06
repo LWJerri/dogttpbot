@@ -9,9 +9,7 @@ if (!BOT_TOKEN) throw new Error("BOT_TOKEN is not defined.");
 
 export const bot = new Bot(BOT_TOKEN, { client: { canUseWebhookReply: (method) => method === "sendChatAction" } });
 
-if (NODE_ENV === "development" && !NGROK_TOKEN) {
-  console.log("Can't run bot in development mode without NGROK_TOKEN.");
-} else {
+if (NODE_ENV === "development" && NGROK_TOKEN) {
   const app = express();
 
   await ngrok.authtoken({ authtoken: NGROK_TOKEN });

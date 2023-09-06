@@ -1,6 +1,6 @@
 {
   "name": "dogttpbot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Send pictures of dogs instead of HTTP status codes.",
   "main": "./build/app.js",
   "type": "module",
