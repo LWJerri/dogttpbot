@@ -1,7 +1,7 @@
 import express from "express";
 import { webhookCallback } from "grammy";
 import ngrok from "ngrok";
-import { bot } from "../app";
+import { bot } from "./app";
 
 const { NGROK_TOKEN, BOT_TOKEN } = process.env;
 

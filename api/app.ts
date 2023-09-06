@@ -1,6 +1,6 @@
 import "dotenv/config";
 import { Bot, InlineKeyboard, InlineQueryResultBuilder, webhookCallback } from "grammy";
-import { devBootstrap } from "./utils/devBootstrap";
+import { devBootstrap } from "./devBootstrap";
 
 const { BOT_TOKEN, NGROK_TOKEN, NODE_ENV } = process.env;
 
