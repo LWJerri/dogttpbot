@@ -1,6 +1,6 @@
 {
   "name": "dogttpbot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Send pictures of dogs instead of HTTP status codes.",
   "main": "./build/app.js",
   "type": "module",
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/LWJerri/dogttpbot#readme",
   "devDependencies": {
     "@types/express": "^4.17.18",
-    "@types/node": "^20.6.5",
+    "@types/node": "^20.8.0",
     "prettier": "^3.0.3",
     "tsx": "^3.13.0",
     "typescript": "^5.2.2"

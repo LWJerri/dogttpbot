@@ -7,9 +7,11 @@ const { BOT_TOKEN, NGROK_TOKEN, NODE_ENV } = process.env;
 
 if (!BOT_TOKEN) throw new Error("BOT_TOKEN is not defined.");
 
-export const bot = new Bot(BOT_TOKEN, { client: { canUseWebhookReply: (method) => method === "sendChatAction" } });
+const bot = new Bot(BOT_TOKEN, { client: { canUseWebhookReply: (method) => method === "sendChatAction" } });
 
-if (NODE_ENV === "development" && NGROK_TOKEN) {
+if (NODE_ENV === "development") {
+  if (!NGROK_TOKEN) throw new Error("NGROK_TOKEN is not defined.");
+
   const app = express();
 
   await ngrok.authtoken({ authtoken: NGROK_TOKEN });
@@ -33,12 +35,7 @@ bot.command("start", async (ctx) => {
     "This bot [open-source](github.com/LWJerri/dogttpbot) and uses [grammY](https://grammy.dev) 🌈",
   ];
 
-  await ctx.reply(messages.join("\n\n"), {
-    reply_to_message_id: ctx.message.message_id,
-    parse_mode: "Markdown",
-    disable_web_page_preview: true,
-    reply_markup: keyboard,
-  });
+  await ctx.reply(messages.join("\n\n"), { parse_mode: "Markdown", reply_markup: keyboard });
 });
 
 bot.on("inline_query", async (ctx) => {
@@ -47,14 +44,14 @@ bot.on("inline_query", async (ctx) => {
   if (!query) return;
 
   const request = await fetch(`https://http.dog/${query}.jpg`);
-  const isCodeFound = request.headers.get("content-type") === "image/jpeg";
+  const isContentTypeFound = request.headers.get("content-type") === "image/jpeg";
 
-  const buildPhotoUrl = `https://http.dog/${isCodeFound ? query : "404"}.jpg`;
+  const buildPhotoUrl = `https://http.dog/${isContentTypeFound ? query : "404"}.jpg`;
   const mdnDocsURL = `[More info about ${query} code.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/${query})`;
 
   const inlineQueryResponse = InlineQueryResultBuilder.photo(id, buildPhotoUrl, {
     thumbnail_url: buildPhotoUrl,
-    caption: isCodeFound ? mdnDocsURL : "Requested HTTP code not found 😭",
+    caption: isContentTypeFound ? mdnDocsURL : "Requested HTTP code not found 😭",
     parse_mode: "Markdown",
   });
 
