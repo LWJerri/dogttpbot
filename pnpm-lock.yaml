@@ -13,7 +13,7 @@ dependencies:
     version: 4.18.2
   grammy:
     specifier: ^1.19.0
-    version: 1.19.0
+    version: 1.19.1
   ngrok:
     specifier: 5.0.0-beta.2
     version: 5.0.0-beta.2
@@ -701,8 +701,8 @@ packages:
       responselike: 2.0.1
     dev: false
 
-  /grammy@1.19.0:
-    resolution: {integrity: sha512-EYOgvdA2H3taA8kDyHJHfcydU5Q4TUFWLoqakFgVyetRtBeNDlMzUEO95N/BMF25iD+6Ca9h2rp0GNRkKoEu2A==}
+  /grammy@1.19.1:
+    resolution: {integrity: sha512-eZw/lR8HDj45zAlDOkCEG00lSYLbjltD5hv1zs4DOJ0KNAxPW80rt6bVbvcZaVxdTKIctAHJxURdrH8qdPrv2g==}
     engines: {node: ^12.20.0 || >=14.13.1}
     dependencies:
       '@grammyjs/types': 3.3.0
