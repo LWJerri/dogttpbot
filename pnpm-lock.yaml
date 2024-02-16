@@ -13,7 +13,7 @@ dependencies:
     version: 4.18.2
   grammy:
     specifier: ^1.19.2
-    version: 1.20.4
+    version: 1.21.1
   ngrok:
     specifier: 5.0.0-beta.2
     version: 5.0.0-beta.2
@@ -244,8 +244,8 @@ packages:
     dev: true
     optional: true
 
-  /@grammyjs/types@3.4.6:
-    resolution: {integrity: sha512-J7xb4JFmdTG2JXDirytp9KuUBKhzT8cAeB3tg2dyWy0VzF/Pdi1t8YaBmNsGeL6VvdvAXHtBTfzrc3jBTD2Kuw==}
+  /@grammyjs/types@3.5.2:
+    resolution: {integrity: sha512-KZlJcOdgD8N6SMIHWfwmb11L5/L2+rptWBxCexbzNCry/wfLXFFGFniyUrySnvFo+cWMxgy5GuImwY3mhUrP8g==}
     dev: false
 
   /@sindresorhus/is@4.6.0:
@@ -725,11 +725,11 @@ packages:
       responselike: 2.0.1
     dev: false
 
-  /grammy@1.20.4:
-    resolution: {integrity: sha512-9BqBOcpQpDzGOUmjdXZKqFWVRqY+ZkWAhkYU1YiDq90a+yOIIoQbjWt8rip6zRE4ePoLhHG5Rq7QLk90sshNiw==}
+  /grammy@1.21.1:
+    resolution: {integrity: sha512-gXHHU83yffHtxutuQlyefClFZN+3bZrmGXYcKVAE2R9SSNlnW9ohF4dC7omn6gHhBoZNRiRS4kumiFc12sal3A==}
     engines: {node: ^12.20.0 || >=14.13.1}
     dependencies:
-      '@grammyjs/types': 3.4.6
+      '@grammyjs/types': 3.5.2
       abort-controller: 3.0.0
       debug: 4.3.4
       node-fetch: 2.7.0
