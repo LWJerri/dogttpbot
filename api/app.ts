@@ -32,7 +32,7 @@ bot.command("start", async (ctx) => {
 
   const messages = [
     "I can search for HTTP dog inline.",
-    "This bot [open-source](github.com/LWJerri/dogttpbot) and uses [grammY](https://grammy.dev) 🌈",
+    "This bot is [open-source](github.com/LWJerri/dogttpbot) and uses [grammY](https://grammy.dev) 🌈",
   ];
 
   await ctx.reply(messages.join("\n\n"), { parse_mode: "Markdown", reply_markup: keyboard });
@@ -44,18 +44,20 @@ bot.on("inline_query", async (ctx) => {
   if (!query) return;
 
   const request = await fetch(`https://http.dog/${query}.jpg`);
-  const isContentTypeFound = request.headers.get("content-type") === "image/jpeg";
+  const isImageContentType = request.headers.get("content-type") === "image/jpeg";
 
-  const buildPhotoUrl = `https://http.dog/${isContentTypeFound ? query : "404"}.jpg`;
-  const mdnDocsURL = `[More info about ${query} code.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/${query})`;
+  if (!isImageContentType) return;
 
-  const inlineQueryResponse = InlineQueryResultBuilder.photo(id, buildPhotoUrl, {
-    thumbnail_url: buildPhotoUrl,
-    caption: isContentTypeFound ? mdnDocsURL : "Requested HTTP code not found 😭",
+  const photoUrl = `https://http.dog/${query}.jpg`;
+  const mdnWebDocsUrl = `[More info about ${query} code.](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/${query})`;
+
+  const inlineQueryResponse = InlineQueryResultBuilder.photo(id, photoUrl, {
+    thumbnail_url: photoUrl,
+    caption: mdnWebDocsUrl,
     parse_mode: "Markdown",
   });
 
-  await ctx.answerInlineQuery([inlineQueryResponse], { cache_time: 60 * 60 * 24 });
+  await ctx.answerInlineQuery([inlineQueryResponse], { cache_time: 60 * 60 * 24 * 7 });
 });
 
 export default webhookCallback(bot, "https");
