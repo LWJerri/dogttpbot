@@ -1,20 +1,17 @@
 {
   "compilerOptions": {
-    "outDir": "./build",
+    "outDir": "dist",
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "NodeNext",
     "inlineSourceMap": true,
-    "moduleResolution": "node",
     "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
     "rootDir": "./api",
-    "declaration": true,
     "typeRoots": ["node_modules/@types"]
   },
-
   "include": ["api"],
   "exclude": ["node_modules"]
 }
