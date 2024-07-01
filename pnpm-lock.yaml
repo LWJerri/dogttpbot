@@ -15,8 +15,8 @@ importers:
         specifier: 4.19.2
         version: 4.19.2
       grammy:
-        specifier: 1.25.2
-        version: 1.25.2
+        specifier: 1.26.0
+        version: 1.26.0
       ngrok:
         specifier: 5.0.0-beta.2
         version: 5.0.0-beta.2
@@ -177,8 +177,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@grammyjs/types@3.9.0':
-    resolution: {integrity: sha512-QzZAbz5COBZnDlDs6x94TIIIH5Pi7AMk0rJPM2O5JAz5Q+s7Xxp3lGg/pWyiVR9Q8euRDYCJmDtcRjwwFD6a3g==}
+  '@grammyjs/types@3.10.0':
+    resolution: {integrity: sha512-TDWn0bjTzEqG5coxnbSOCOEEkeQ3RCmf6XgJ3TBBMbLmb9eyQM1Evr8XzqLwXr9IcQvHMVeQ/lS86lkvYeADvw==}
 
   '@sindresorhus/is@4.6.0':
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
@@ -416,8 +416,8 @@ packages:
     resolution: {integrity: sha512-6tfZ91bOr7bOXnK7PRDCGBLa1H4U080YHNaAQ2KsMGlLEzRbk44nsZF2E1IeRc3vtJHPVbKCYgdFbaGO2ljd8g==}
     engines: {node: '>=10.19.0'}
 
-  grammy@1.25.2:
-    resolution: {integrity: sha512-i1NCr2B8d5/hEHbIzqwG/1+JmIY63xVcBPCyciJB88BYKlXKsM42v5dfRVGf7AYyPxL07Em0qk42Z6YJIqR3HQ==}
+  grammy@1.26.0:
+    resolution: {integrity: sha512-jrXKDU8UzcQaecteJxuXO80trAKkbmFhaTKIVIAyS/9pLxUyqaK98XjOJjL6t6b7cnLydJtYsAkRpkQ/TUxTrQ==}
     engines: {node: ^12.20.0 || >=14.13.1}
 
   has-property-descriptors@1.0.2:
@@ -754,7 +754,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@grammyjs/types@3.9.0': {}
+  '@grammyjs/types@3.10.0': {}
 
   '@sindresorhus/is@4.6.0': {}
 
@@ -1075,9 +1075,9 @@ snapshots:
       p-cancelable: 2.1.1
       responselike: 2.0.1
 
-  grammy@1.25.2:
+  grammy@1.26.0:
     dependencies:
-      '@grammyjs/types': 3.9.0
+      '@grammyjs/types': 3.10.0
       abort-controller: 3.0.0
       debug: 4.3.4
       node-fetch: 2.7.0
