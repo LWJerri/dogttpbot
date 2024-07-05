@@ -15,8 +15,8 @@ importers:
         specifier: 4.19.2
         version: 4.19.2
       grammy:
-        specifier: 1.26.0
-        version: 1.26.0
+        specifier: 1.26.1
+        version: 1.26.1
       ngrok:
         specifier: 5.0.0-beta.2
         version: 5.0.0-beta.2
@@ -416,8 +416,8 @@ packages:
     resolution: {integrity: sha512-6tfZ91bOr7bOXnK7PRDCGBLa1H4U080YHNaAQ2KsMGlLEzRbk44nsZF2E1IeRc3vtJHPVbKCYgdFbaGO2ljd8g==}
     engines: {node: '>=10.19.0'}
 
-  grammy@1.26.0:
-    resolution: {integrity: sha512-jrXKDU8UzcQaecteJxuXO80trAKkbmFhaTKIVIAyS/9pLxUyqaK98XjOJjL6t6b7cnLydJtYsAkRpkQ/TUxTrQ==}
+  grammy@1.26.1:
+    resolution: {integrity: sha512-Vwx2MQnu9DblYzugnf4vdozjotHMmHw3XLcx0gM6lGjLvO0Jg2gBREDXm1xGvyUW6ckgBEyThUKILqmFL/8PHQ==}
     engines: {node: ^12.20.0 || >=14.13.1}
 
   has-property-descriptors@1.0.2:
@@ -1075,7 +1075,7 @@ snapshots:
       p-cancelable: 2.1.1
       responselike: 2.0.1
 
-  grammy@1.26.0:
+  grammy@1.26.1:
     dependencies:
       '@grammyjs/types': 3.10.0
       abort-controller: 3.0.0
