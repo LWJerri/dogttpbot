@@ -3,7 +3,7 @@ import express from "express";
 import { Bot, InlineKeyboard, InlineQueryResultBuilder, webhookCallback } from "grammy";
 import localtunnel from "localtunnel";
 
-const { BOT_TOKEN, NODE_ENV, PORT, VERCEL_BRANCH_URL } = process.env;
+const { BOT_TOKEN, NODE_ENV, PORT, VERCEL_URL } = process.env;
 
 if (!BOT_TOKEN) throw new Error("BOT_TOKEN is not defined.");
 
@@ -25,7 +25,9 @@ if (NODE_ENV === "development") {
 
   console.log(`Development webhook is set to ${url}.`);
 } else {
-  await bot.api.setWebhook(`https://${VERCEL_BRANCH_URL}/api/bot`);
+  if (!VERCEL_URL) throw new Error("VERCEL_URL not defined.");
+
+  await bot.api.setWebhook(`https://${VERCEL_URL}/api/bot`);
 }
 
 bot.command("start", async (ctx) => {
