@@ -27,7 +27,7 @@ if (NODE_ENV === "development") {
 } else {
   if (!VERCEL_URL) throw new Error("VERCEL_URL not defined.");
 
-  await bot.api.setWebhook(`https://${VERCEL_URL}/api/bot`);
+  await bot.api.setWebhook(`https://${VERCEL_URL}/api/app`);
 }
 
 bot.command("start", async (ctx) => {
