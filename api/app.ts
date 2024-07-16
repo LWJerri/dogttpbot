@@ -1,30 +1,29 @@
 import "dotenv/config";
 import express from "express";
 import { Bot, InlineKeyboard, InlineQueryResultBuilder, webhookCallback } from "grammy";
-import ngrok from "ngrok";
+import localtunnel from "localtunnel";
 
-const { BOT_TOKEN, NGROK_TOKEN, NODE_ENV } = process.env;
+const { BOT_TOKEN, NODE_ENV, PORT } = process.env;
 
 if (!BOT_TOKEN) throw new Error("BOT_TOKEN is not defined.");
 
 const bot = new Bot(BOT_TOKEN, { client: { canUseWebhookReply: (method) => method === "sendChatAction" } });
 
 if (NODE_ENV === "development") {
-  if (!NGROK_TOKEN) throw new Error("NGROK_TOKEN is not defined.");
+  if (!PORT) throw new Error("PORT is not defined.");
 
   const app = express();
 
-  await ngrok.authtoken({ authtoken: NGROK_TOKEN });
+  app.use(express.json());
+  app.use(webhookCallback(bot, "express"));
 
-  const url = await ngrok.connect({ addr: 3000 });
+  app.listen(PORT);
 
-  app.use(webhookCallback(bot, "https"));
+  const { url } = await localtunnel({ port: Number(PORT) });
 
-  app.listen(3000);
+  await bot.api.setWebhook(url);
 
-  const { statusText } = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/setWebhook?url=${url}`);
-
-  console.log(`Webhook set with response: ${statusText}`);
+  console.log(`Development webhook is set to ${url}.`);
 }
 
 bot.command("start", async (ctx) => {

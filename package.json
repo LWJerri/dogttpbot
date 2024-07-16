@@ -1,18 +1,17 @@
 {
   "name": "dogttpbot",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Send pictures of dogs instead of HTTP status codes.",
   "main": "./dist/app.js",
   "type": "module",
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "prestart": "pnpm build",
     "start": "NODE_ENV=production node --enable-source-maps ./dist/app.js",
     "dev": "NODE_ENV=development tsx watch ./api/app.ts"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "repository": {
     "type": "git",
@@ -27,13 +26,14 @@
   "homepage": "https://github.com/LWJerri/dogttpbot#readme",
   "dependencies": {
     "dotenv": "16.4.5",
-    "express": "4.19.2",
-    "grammy": "1.27.0",
-    "ngrok": "5.0.0-beta.2"
+    "grammy": "1.27.0"
   },
   "devDependencies": {
     "@types/express": "4.17.21",
+    "@types/localtunnel": "2.0.4",
     "@types/node": "20.14.10",
+    "express": "4.19.2",
+    "localtunnel": "2.0.2",
     "prettier": "3.3.3",
     "tsx": "4.16.2",
     "typescript": "5.5.3"
