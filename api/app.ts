@@ -3,15 +3,14 @@ import express from "express";
 import { Bot, InlineKeyboard, InlineQueryResultBuilder, webhookCallback } from "grammy";
 import localtunnel from "localtunnel";
 
-const { BOT_TOKEN, NODE_ENV, PORT, VERCEL_URL, SECRET_TOKEN } = process.env;
+const { BOT_TOKEN, VERCEL_ENV, PORT, SECRET_TOKEN } = process.env;
 
-if (!BOT_TOKEN || !SECRET_TOKEN) throw new Error(`${BOT_TOKEN ? "SECRET_TOKEN" : "BOT_TOKEN"} is not defined.`);
+if (!BOT_TOKEN || !SECRET_TOKEN) throw new Error("BOT_TOKEN or SECRET_TOKEN is not defined.");
 
 const bot = new Bot(BOT_TOKEN, { client: { canUseWebhookReply: (method) => method === "sendChatAction" } });
 
-if (NODE_ENV === "development") {
-  if (!PORT) throw new Error("PORT is not defined.");
-
+// This code will be executed only in development environment.
+if (!VERCEL_ENV && PORT) {
   const app = express();
 
   app.use(express.json());
@@ -24,10 +23,6 @@ if (NODE_ENV === "development") {
   await bot.api.setWebhook(url, { secret_token: SECRET_TOKEN });
 
   console.log(`Development webhook is set to ${url}.`);
-} else {
-  if (!VERCEL_URL) throw new Error("VERCEL_URL not defined.");
-
-  await bot.api.setWebhook(`https://${VERCEL_URL}/api/app`, { secret_token: SECRET_TOKEN });
 }
 
 bot.command("start", async (ctx) => {

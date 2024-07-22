@@ -9,9 +9,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strict": true,
-    "rootDir": "./api",
+    "rootDir": "./",
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["api"],
+  "include": ["api", "utils"],
   "exclude": ["node_modules"]
 }
