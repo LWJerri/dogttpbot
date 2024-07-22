@@ -5,9 +5,9 @@
   "main": "./dist/app.js",
   "type": "module",
   "scripts": {
+    "webhook": "node --enable-source-maps ./dist/utils/setWebhook.js",
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "prestart": "node --enable-source-maps ./dist/utils/setWebhook.js",
     "start": "node --enable-source-maps ./dist/api/app.js",
     "dev": "tsx watch ./api/app.ts"
   },
