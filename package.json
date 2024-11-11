@@ -27,7 +27,7 @@
   "homepage": "https://github.com/LWJerri/dogttpbot#readme",
   "dependencies": {
     "dotenv": "16.4.5",
-    "grammy": "1.31.0"
+    "grammy": "1.31.1"
   },
   "devDependencies": {
     "@types/express": "5.0.0",
