@@ -35,7 +35,7 @@
     "@types/node": "22.10.1",
     "express": "4.21.1",
     "localtunnel": "2.0.2",
-    "prettier": "3.4.1",
+    "prettier": "3.4.2",
     "tsx": "4.19.2",
     "typescript": "5.7.2"
   }
