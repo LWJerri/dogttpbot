@@ -12,8 +12,8 @@ importers:
         specifier: 16.4.7
         version: 16.4.7
       grammy:
-        specifier: 1.34.0
-        version: 1.34.0
+        specifier: 1.34.1
+        version: 1.34.1
     devDependencies:
       '@types/express':
         specifier: 5.0.0
@@ -304,8 +304,8 @@ packages:
       supports-color:
         optional: true
 
-  debug@4.3.4:
-    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+  debug@4.4.0:
+    resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -418,8 +418,8 @@ packages:
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
 
-  grammy@1.34.0:
-    resolution: {integrity: sha512-YSLUSLdwycufB0Si9em+Ef3aXt7Vq0LYuGgwF4+ZskPb6+3RzrPdkh28qQNKhCeIXKodgMKQ5CxAHf/fLJZufg==}
+  grammy@1.34.1:
+    resolution: {integrity: sha512-0ypt5d1bna8CqSANlDCg2ce1sx87oDm9gjyPRHWYpAgvjy3WYW9oEmMllAYCWCZ3vHDULW5x14jBMXai51ar0Q==}
     engines: {node: ^12.20.0 || >=14.13.1}
 
   has-property-descriptors@1.0.2:
@@ -855,9 +855,9 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
-  debug@4.3.4:
+  debug@4.4.0:
     dependencies:
-      ms: 2.1.2
+      ms: 2.1.3
 
   define-data-property@1.1.4:
     dependencies:
@@ -999,11 +999,11 @@ snapshots:
     dependencies:
       get-intrinsic: 1.2.4
 
-  grammy@1.34.0:
+  grammy@1.34.1:
     dependencies:
       '@grammyjs/types': 3.18.0
       abort-controller: 3.0.0
-      debug: 4.3.4
+      debug: 4.4.0
       node-fetch: 2.7.0
     transitivePeerDependencies:
       - encoding
