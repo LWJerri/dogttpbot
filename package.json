@@ -11,6 +11,7 @@
     "start": "node --enable-source-maps ./dist/api/app.js",
     "dev": "tsx watch ./api/app.ts"
   },
+  "packageManager": "pnpm@10.5.0",
   "engines": {
     "node": ">=20"
   },
