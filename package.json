@@ -31,7 +31,7 @@
     "grammy": "1.36.1"
   },
   "devDependencies": {
-    "@types/express": "5.0.1",
+    "@types/express": "5.0.2",
     "@types/localtunnel": "2.0.4",
     "@types/node": "22.15.21",
     "express": "5.1.0",
