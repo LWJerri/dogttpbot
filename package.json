@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/LWJerri/dogttpbot#readme",
   "dependencies": {
-    "dotenv": "17.2.0",
+    "dotenv": "17.2.1",
     "grammy": "1.37.0"
   },
   "devDependencies": {
