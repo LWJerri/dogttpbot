@@ -41,7 +41,7 @@ bot.on("inline_query", async (ctx) => {
 
   if (!query) return;
 
-  const request = await fetch(`https://http.dog/${query}.jpg`);
+  const request = await fetch(`https://httpstatusdogs.com/img/${query}.jpg`);
   const isImageContentType = request.headers.get("content-type") === "image/jpeg";
 
   if (!isImageContentType) return;
