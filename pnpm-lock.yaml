@@ -12,8 +12,8 @@ importers:
         specifier: 17.2.1
         version: 17.2.1
       grammy:
-        specifier: 1.37.0
-        version: 1.37.0
+        specifier: 1.37.1
+        version: 1.37.1
     devDependencies:
       '@types/express':
         specifier: 5.0.3
@@ -425,8 +425,8 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  grammy@1.37.0:
-    resolution: {integrity: sha512-UBGqGKux+49t1vm7n/m1BaeXIYbWESXjhaFxG+9z33VTLSHdQJwIOmpNKmZSaoBlSWbAJE+IJZ30X7RfWvEolA==}
+  grammy@1.37.1:
+    resolution: {integrity: sha512-xR7Q1hp26EfFPXe9m0pulQLMoOJmBek0OyTHp07qW+mxfXuB/ZCrxGe65Cx0Cqmbj1X4Zvg6kuUKc6d88c30PQ==}
     engines: {node: ^12.20.0 || >=14.13.1}
 
   has-symbols@1.1.0:
@@ -1010,7 +1010,7 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  grammy@1.37.0:
+  grammy@1.37.1:
     dependencies:
       '@grammyjs/types': 3.21.0
       abort-controller: 3.0.0
