@@ -12,8 +12,8 @@ importers:
         specifier: 17.2.1
         version: 17.2.1
       grammy:
-        specifier: 1.37.1
-        version: 1.37.1
+        specifier: 1.38.1
+        version: 1.38.1
     devDependencies:
       '@types/express':
         specifier: 5.0.3
@@ -198,8 +198,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@grammyjs/types@3.21.0':
-    resolution: {integrity: sha512-IMj0EpmglPCICuyfGRx4ENKPSuzS2xMSoPgSPzHC6FtnWKDEmJLBP/GbPv/h3TAeb27txqxm/BUld+gbJk6ccQ==}
+  '@grammyjs/types@3.22.1':
+    resolution: {integrity: sha512-QJX0Y8lpjE+/nuTKGmxybKmvdrLHV7gqbhI/UXoWlJLWtowbwk+oW+ngfHKwegD+ewL2SX8+tQo/1E14Ma0qlw==}
 
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
@@ -431,8 +431,8 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  grammy@1.37.1:
-    resolution: {integrity: sha512-xR7Q1hp26EfFPXe9m0pulQLMoOJmBek0OyTHp07qW+mxfXuB/ZCrxGe65Cx0Cqmbj1X4Zvg6kuUKc6d88c30PQ==}
+  grammy@1.38.1:
+    resolution: {integrity: sha512-aVBMeyYUjZ+rUEI+aV0T4himboXGs8Uf57c+vhtmHplPfgaRT04dyT9pG8R/GAmKeTUPh84GKO0u9IvaEGN6RA==}
     engines: {node: ^12.20.0 || >=14.13.1}
 
   has-symbols@1.1.0:
@@ -745,7 +745,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.8':
     optional: true
 
-  '@grammyjs/types@3.21.0': {}
+  '@grammyjs/types@3.22.1': {}
 
   '@types/body-parser@1.19.6':
     dependencies:
@@ -1020,9 +1020,9 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  grammy@1.37.1:
+  grammy@1.38.1:
     dependencies:
-      '@grammyjs/types': 3.21.0
+      '@grammyjs/types': 3.22.1
       abort-controller: 3.0.0
       debug: 4.4.1
       node-fetch: 2.7.0
