@@ -12,8 +12,8 @@ importers:
         specifier: 17.2.3
         version: 17.2.3
       grammy:
-        specifier: 1.38.2
-        version: 1.38.2
+        specifier: 1.38.3
+        version: 1.38.3
     devDependencies:
       '@types/express':
         specifier: 5.0.3
@@ -198,8 +198,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@grammyjs/types@3.22.1':
-    resolution: {integrity: sha512-QJX0Y8lpjE+/nuTKGmxybKmvdrLHV7gqbhI/UXoWlJLWtowbwk+oW+ngfHKwegD+ewL2SX8+tQo/1E14Ma0qlw==}
+  '@grammyjs/types@3.22.2':
+    resolution: {integrity: sha512-uu7DX2ezhnBPozL3bXHmwhLvaFsh59E4QyviNH4Cij7EdVekYrs6mCzeXsa2pDk30l3uXo7DBahlZLzTPtpYZg==}
 
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
@@ -316,8 +316,8 @@ packages:
       supports-color:
         optional: true
 
-  debug@4.4.1:
-    resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
+  debug@4.4.3:
+    resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -431,8 +431,8 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  grammy@1.38.2:
-    resolution: {integrity: sha512-11O8rA3kt54Avk6cIyqdXFphkq1fbFz9Vh8hbbj8vid0VqJbZ4Yz2fpqDeaDONxnX3h9NdE/JGMk7VHVtmwKuQ==}
+  grammy@1.38.3:
+    resolution: {integrity: sha512-1eQwNfxrRQ0JOFqd3n1nKqyWkHvCQRCNiH8e5aYm27mIjGPobgss58XN8GORC2ejAWM2+NSdUknrMhYj87cjGg==}
     engines: {node: ^12.20.0 || >=14.13.1}
 
   has-symbols@1.1.0:
@@ -745,7 +745,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.10':
     optional: true
 
-  '@grammyjs/types@3.22.1': {}
+  '@grammyjs/types@3.22.2': {}
 
   '@types/body-parser@1.19.6':
     dependencies:
@@ -873,7 +873,7 @@ snapshots:
     dependencies:
       ms: 2.1.3
 
-  debug@4.4.1:
+  debug@4.4.3:
     dependencies:
       ms: 2.1.3
 
@@ -1020,11 +1020,11 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  grammy@1.38.2:
+  grammy@1.38.3:
     dependencies:
-      '@grammyjs/types': 3.22.1
+      '@grammyjs/types': 3.22.2
       abort-controller: 3.0.0
-      debug: 4.4.1
+      debug: 4.4.3
       node-fetch: 2.7.0
     transitivePeerDependencies:
       - encoding
