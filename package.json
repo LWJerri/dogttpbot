@@ -31,10 +31,10 @@
     "grammy": "1.38.4"
   },
   "devDependencies": {
-    "@types/express": "5.0.5",
+    "@types/express": "5.0.6",
     "@types/localtunnel": "2.0.4",
     "@types/node": "24.10.2",
-    "express": "5.1.0",
+    "express": "5.2.1",
     "localtunnel": "2.0.2",
     "prettier": "3.7.4",
     "tsx": "4.20.6",
