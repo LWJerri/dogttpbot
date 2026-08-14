@@ -12,8 +12,8 @@ importers:
         specifier: 17.4.2
         version: 17.4.2
       grammy:
-        specifier: 1.44.0
-        version: 1.44.0
+        specifier: 1.45.0
+        version: 1.45.0
     devDependencies:
       '@types/express':
         specifier: 5.0.6
@@ -198,8 +198,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@grammyjs/types@3.28.0':
-    resolution: {integrity: sha512-4JvXCdxRZHCje0M4gHzLwtB4bLno3WD28xd8CNfk4POWIu73BFnSvGeW6OQ5gPem4eYTEwkD9yDaXssixl6tMQ==}
+  '@grammyjs/types@4.0.0':
+    resolution: {integrity: sha512-Z8lDLTvOlo12e5Vnly/vQh3JC9ppaitS1dGZ3w068gNitOd/y8tTSiib+Xm38aBGbtYGmUZwOc6afYrLs2CSTg==}
 
   '@oxfmt/binding-android-arm-eabi@0.57.0':
     resolution: {integrity: sha512-qVBsEO+KugOsCmUHcO8iqNnqc65p7PCKpCs8M66mPZ+Ri+CWbcpoQOEJBg2OTu03+0qu++NK1jj6IzvQVs0Sig==}
@@ -538,8 +538,8 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  grammy@1.44.0:
-    resolution: {integrity: sha512-gGVykS5+c5f1tPV97LuU6IDRMawE2NzpwM9pNz58HQ35IZXDnYL3VOLvNzYognPSeBIOSzQXRu5w96V0aY8y8A==}
+  grammy@1.45.0:
+    resolution: {integrity: sha512-hJBD+KvB+Tae138HOQJrPvRIqyK7oyPtW5xDbVajgs+gcE4qgaRpgVtBQc066HoJb4wtZX3HJ+eGJQTqdZ1zjQ==}
     engines: {node: ^12.20.0 || >=14.13.1}
 
   has-symbols@1.1.0:
@@ -857,7 +857,7 @@ snapshots:
   '@esbuild/win32-x64@0.28.1':
     optional: true
 
-  '@grammyjs/types@3.28.0': {}
+  '@grammyjs/types@4.0.0': {}
 
   '@oxfmt/binding-android-arm-eabi@0.57.0':
     optional: true
@@ -1176,9 +1176,9 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  grammy@1.44.0:
+  grammy@1.45.0:
     dependencies:
-      '@grammyjs/types': 3.28.0
+      '@grammyjs/types': 4.0.0
       abort-controller: 3.0.0
       debug: 4.4.3
       node-fetch: 2.7.0
